@@ -1,0 +1,84 @@
+/* homepage.css */
+
+:root {
+    --dark-green: #132A13;
+    --mid-green: #31572C;
+    --light-green: #4F772D;
+    --lime-green: #90A955;
+    --light-yellow: #ECF39E;
+    --text-dark: #333;
+    --text-light: #f8f8f8;
+    --link-color: #f0e5d8; /* A complementary background color to your theme */
+}
+
+/* Base styles */
+#content-area {
+    background-color: var(--lime-green); /* A background that complements your theme */
+    padding: 40px;
+    margin: 40px auto; /* Center the content area */
+    max-width: 1000px; /* Max width for optimal reading */
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: var(--text-dark); /* Dark text for contrast */
+}
+
+#content-area h2, #content-area h3 {
+    color: var(--dark-green); /* Green headers for thematic consistency */
+    margin: 20px 0; /* Space around headers */
+    font-weight: normal; /* Normal font weight for a modern look */
+    text-align: center; /* Center align the headers */
+}
+
+#content-area p, #content-area ul {
+    text-align: left; /* Align text to the left for body content */
+    margin: 15px auto; /* Centered margin for paragraphs and lists */
+    line-height: 1.6; /* Line height for readability */
+    max-width: 800px; /* Restricting width for easier reading */
+}
+
+#content-area a {
+    color: var(--link-color); /* Lime green links for an accent color */
+    text-decoration: underline; /* Underline links for clarity */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#content-area a:hover {
+    color: var(--light-green); /* Light green on hover for visual feedback */
+}
+
+#content-area ul {
+    list-style: inside disc; /* Discs inside to maintain clean alignment */
+}
+
+#content-area li {
+    padding: 5px 0; /* Spacing between list items */
+}
+
+/* Enhance the text */
+#content-area p {
+    font-size: 1.1em; /* Slightly larger text for body paragraphs */
+    color: var(--text-dark); /* Dark color for paragraph text */
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #content-area {
+        padding: 20px;
+    }
+
+    #content-area h2, #content-area h3 {
+        font-size: smaller; /* Smaller font size for mobile */
+    }
+
+    #content-area p, #content-area ul {
+        max-width: 100%; /* Full width for mobile readability */
+    }
+}
+

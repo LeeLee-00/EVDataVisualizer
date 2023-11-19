@@ -1,0 +1,41 @@
+/* about.css */
+.profile-pic {
+    width: 200px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular profile picture */
+    display: block;
+    margin: 20px auto; /* Center the image */
+}
+
+.linkedin-link {
+    display: inline-block;
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.linkedin-link:hover {
+    background-color: #005fa3;
+}
+
+/* About the Developer section styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px; /* Slightly rounded corners for the section */
+}
+
+h2 {
+    color: #132A13;
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify; /* Justify the paragraphs for a polished look */
+    margin-bottom: 1em; /* Space below paragraphs */
+}
