@@ -1,0 +1,11 @@
+/* Typography and base element styles */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--dark-green);
+}
+
+.table-title h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}

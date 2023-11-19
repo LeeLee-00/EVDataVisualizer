@@ -1,0 +1,60 @@
+:root {
+    --dark-green: #132A13;
+    --mid-green: #31572C;
+    --light-green: #4F772D;
+    --lime-green: #90A955;
+    --light-yellow: #ECF39E;
+}
+
+/* Base styles for the responsive table */
+.responsive-table {
+    max-width: 100%; /* Prevents the table from stretching too wide */
+    margin: 20px auto; /* Centers the table with a margin on top and bottom */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif; /* A standard, easy-to-read font */
+    color: #FFF; /* White text for readability */
+    background-color: var(--dark-green); /* A variable for dark green, assuming you've defined it in your :root or elsewhere */
+    border-radius: 8px; /* Optional rounded corners for the table */
+    overflow: hidden; /* Ensures the border-radius clips the content */
+}
+
+/* Header styles */
+.responsive-table thead {
+    background-color: var(--mid-green); /* A variable for mid-tone green */
+    color: #FFF;
+}
+
+.responsive-table th {
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 15px; /* Ample padding for header cells */
+}
+
+/* Zebra striping for rows */
+.responsive-table tr:nth-child(even) {
+    background-color: var(--light-green); /* A variable for lighter green */
+}
+
+/* Hover effect for rows */
+.responsive-table tr:hover {
+    background-color: #dddddd; /* Light gray for hover, not semi-transparent to ensure readability */
+}
+
+/* Styles for cells */
+.responsive-table td {
+    padding: 10px 15px; /* Uniform padding for table data cells */
+    border-top: 1px solid #ddd; /* A subtle top border for each row */
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 100px) {
+    .responsive-table td,
+    .responsive-table th {
+        padding: 8px; /* Slightly smaller padding on mobile */
+    }
+
+    /* Adjustments to ensure table doesn't look too big on small screens */
+    .responsive-table {
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+}

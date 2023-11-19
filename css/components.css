@@ -1,0 +1,46 @@
+/* Color Palette */
+:root {
+    --dark-green: #132A13;
+    --mid-green: #31572C;
+    --light-green: #4F772D;
+    --lime-green: #90A955;
+    --light-yellow: #ECF39E;
+}
+
+/* Component Styles */
+
+/* Hero Image */
+.hero-image {
+    background-image: url('../assets/Hero_Image_EV.png'); /* Path adjusted as needed */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Consider using min-height for responsiveness */
+    width: 100%; /* Full width coverage */
+}
+
+/* Navigation */
+nav#nav-menu {
+    background-color: var(--mid-green);
+}
+
+nav#nav-menu ul {
+    display: flex;
+    justify-content: space-around; /* Space items evenly */
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#nav-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav#nav-menu ul li a:hover {
+    background-color: var(--light-green);
+}

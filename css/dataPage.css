@@ -1,0 +1,67 @@
+:root {
+    --dark-green: #132A13;
+    --mid-green: #31572C;
+    --light-green: #4F772D;
+    --lime-green: #90A955;
+    --light-yellow: #ECF39E;
+}
+
+/* Specific styles for Data.html */
+main {
+    padding: 20px 0 70px;
+    background-color: var(--light-green);
+}
+
+
+.data-overview-container, .dataset-information {
+    text-align: center; /* Center text */
+}
+
+
+.data-description {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: var(--dark-green);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #FFFFFF; 
+    text-align: center;
+}
+
+.scrollable-container {
+    display: flex;
+    justify-content: center; /* This will center the children horizontally */
+    align-items: center; /* This will center the children vertically, if needed */
+    flex-direction: column; /* Stack children vertically */
+}
+
+
+.dataset-information {
+    background-color: var(--dark-green);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin-right: 20px;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Other styles */
+}
+
+
+.dataset-information ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dataset-information li {
+    padding: 5px 0;
+}
+

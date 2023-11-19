@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVDataVisualizer</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/visualization.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="title-bar">EVDataVisualizer</div>
+        <div class="hero-image"></div> <!-- Your hero image will go here -->
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="Data.html">Data Description</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="chart-container">
+            <h2>Distribution of Electric Vehicle Types</h2>
+            <canvas id="evTypeChart"></canvas>
+        </section>
+
+        <section class="chart-container">
+            <h2>Electric Vehicle Count by Year</h2>
+            <canvas id="evCountYearChart"></canvas>
+        </section>
+
+        <section class="chart-container">
+            <h2>Top Electric Vehicle Makes and Models</h2>
+            <canvas id="topEvMakesModelsChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+
+    <script type="module" src="/js/visualizationManager.js"></script>  
+    <script type="module" src="/js/main.js"></script>
+  
+    
+</body>
+
+</html>

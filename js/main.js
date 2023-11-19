@@ -1,69 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
+// main.js
+
+import { fetchData } from './dataService.js';
+import { createTable } from './tableManager.js';
+import{processEvTypeData, processEvCountByYearData, processTopEvMakesModelsData} from './processedFunctions.js';
+import { renderEvTypeDistributionChart, renderEvCountByYearChart, renderTopEvMakesModelsChart } from './visualizationManager.js';
+// Import any other necessary functions like createTable, setupPagination, etc.
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  fetchData().then(data => { 
+      const evTypeData = processEvTypeData(data);
+      const evCountByYearData = processEvCountByYearData(data);
+      const topEvMakesModelsData = processTopEvMakesModelsData(data);
+
+      renderEvTypeDistributionChart(evTypeData);
+      renderEvCountByYearChart(evCountByYearData);
+      renderTopEvMakesModelsChart(topEvMakesModelsData);
+
+    }).catch(error => {
+        console.error('Error fetching data:', error);
+    });
 });
 
-async function fetchData() {
-    try {
-        const response = await fetch('https://data.wa.gov/resource/f6w7-q2d2.csv');
-        const data = await response.text();
-        const jsonData = parseCSVtoJSON(data);
-        console.log('testing data');
-        console.log(jsonData); // Log data to console for testing
-        populateTable(jsonData);
-        // Further code to process jsonData and update chart
-    } catch (error) {
-        console.error("Error fetching data: ", error);
-    }
-}
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.getElementById('table-container')) {
+      // Code that should only run on pages that require table management
+      fetchData().then(data => {
+          createTable(data);
+          setupPagination();
+          // ... other table-related code
+      }).catch(error => {
+          console.error('Error fetching data:', error);
+      });
+  }
 
-function parseCSVtoJSON(csv) {
-    const lines = csv.split('\n');
-    const result = [];
-    // Trim quotes and whitespace, then split by comma
-    const headers = lines[0].split(',').map(header => header.trim().replace(/^"|"$/g, ''));
+  if (document.getElementById('evTypeChart')) {
+      // Code for setting up charts on visualization.html
+      fetchData().then(data => {
+          // ... process and render data for charts
+      }).catch(error => {
+          console.error('Error fetching data:', error);
+      });
+  }
 
-    for (let i = 1; i < lines.length; i++) {
-        let obj = {};
-        const currentline = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''));
-        
-        for (let j = 0; j < headers.length; j++) {
-            obj[headers[j]] = currentline[j];
-        }
-
-        result.push(obj);
-    }
-
-    return result; // JSON result
-}
-
-
-function populateTable(data) {
-    const tableHeaderRow = document.getElementById('dataHeaderRow');
-    const tableBody = document.getElementById('dataBody');
-
-    // Clear previous headers and rows
-    tableHeaderRow.innerHTML = '';
-    tableBody.innerHTML = '';
-
-    // Define the headers you want to display
-    const headers = ['city', 'state', 'zip_code', 'model_year', 'make', 'model'];
-
-    // Create header row
-    headers.forEach(header => {
-        const th = document.createElement('th');
-        th.textContent = header.replace('_', ' '); // Replace underscores with spaces for display
-        tableHeaderRow.appendChild(th);
-    });
-
-    // Populate the table rows
-    data.forEach(item => {
-        const tr = document.createElement('tr');
-        headers.forEach(header => {
-            const td = document.createElement('td');
-            // Account for possible leading/trailing spaces or quotes in keys
-            td.textContent = item[header.trim().replace(/^"|"$/g, '')]; // Use bracket notation to match the header keys
-            tr.appendChild(td);
-        });
-        tableBody.appendChild(tr);
-    });
-}
+  // ... other page-specific initialization code
+});

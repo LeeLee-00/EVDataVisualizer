@@ -1,0 +1,31 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Palette */
+:root {
+    --dark-green: #132A13;
+    --mid-green: #31572C;
+    --light-green: #4F772D;
+    --lime-green: #90A955;
+    --light-yellow: #ECF39E;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--light-yellow);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--dark-green);
+}
+
+.text-with-shadow {
+    color: #FFFFFF; /* White color */
+    text-shadow: 2px 2px 8px #000000; /* Black shadow for better legibility */
+}

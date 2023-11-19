@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Description - Electric Vehicle Population Data</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dataPage.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="title-bar">EVDataVisualizer</div>
+        <div class="hero-image"></div> 
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="Data.html">Data Description</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="data-description">
+            <h2>Electric Vehicle Population Data</h2>
+            <p>Explore interactive charts and graphs representing the electric vehicle population.</p>
+        </section>
+        <!-- shared scrollable container -->
+        <div class="scrollable-container">
+            <!-- Dataset Information Box -->
+            <div class="dataset-information">
+                <h3>Data Overview</h3>
+                <p>The "Electric_Vehicle_Population_Data.csv" file contains a dataset with the following
+                    characteristics:
+                </p>
+                <div class="data-overview-container">
+                    <br>
+                    <ol>
+                        <li><strong>VIN (1-10):</strong> Partial Vehicle Identification Number</li>
+                        <li><strong>County:</strong> County where the vehicle is registered</li>
+                        <li><strong>City:</strong> County where the vehicle is registered</li>
+                        <li><strong>State:</strong> County where the vehicle is registered</li>
+                        <li><strong>Postal Code:</strong> County where the vehicle is registered</li>
+                        <li><strong>Model Year:</strong> County where the vehicle is registered</li>
+                        <li><strong>Make:</strong> County where the vehicle is registered</li>
+                        <li><strong>Model:</strong> County where the vehicle is registered</li>
+                        <li><strong>Electric Vehicle Type:</strong> County where the vehicle is registered</li>
+                        <li><strong>CAFV Eligibility:</strong> County where the vehicle is registered</li>
+                        <li><strong>Electric Range:</strong>County where the vehicle is registered</li>
+                        <li><strong>Base MSRP: </strong>Manufacturer's Suggested Retail Price</li>
+                        <li><strong>Legislative District: </strong> Legislative district for the vehicle location</li>
+                        <li><strong>DOL Vehicle ID: </strong>Department of Licensing Vehicle ID</li>
+                        <li><strong>GEOCODED COLUMN: </strong>Cordinates</li>
+                        <li><strong>Vehicle Location: </strong>Geographical location coordinates</li>
+                        <li><strong>Electric Utility: </strong>Electric utility provider in the area</li>
+                        <li><strong>2020 Census Tract: </strong>Census tract number</li>
+                        <!-- Add all other column descriptions here -->
+                    </ol>
+                </div>
+                <br>
+                <div class="table-title">
+                    <center>
+                        <h2>Vehicle Registration Data Table</h2>
+                    </center>
+                </div>
+                <div id="table-container">
+                    <!-- The JavaScript will append the table here -->
+                </div>
+                <div id="pagination-container">
+                    <!-- Pagination buttons will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="copyright">© 2023 Your Name or Your Company</div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+
+
+</body>
+
+</html>

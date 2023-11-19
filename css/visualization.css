@@ -1,0 +1,11 @@
+
+
+.chart-container {
+    text-align: center; /* Center aligns the text within the container */
+    margin: auto; /* Centers the container in the parent if it has a specified width */
+    width: 80%; /* Adjust the width as needed */
+}
+
+.chart-container h2 {
+    margin: 20px 0; /* Adds space above and below the title */
+}

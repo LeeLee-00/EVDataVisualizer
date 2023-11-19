@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>EV Data Visualizer</title>
+    <title>EVDataVisualizer</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Ensure the file name matches your CSS file -->
 </head>
-<body>
-    <div class="container">
-        <!-- Container for the data table -->
-        <div id="dataTableContainer">
-            <table id="dataTable">
-                <thead>
-                    <tr id="dataHeaderRow">
 
-                    </tr>
-                </thead>
-                <tbody id="dataBody">
-                    <!-- Data rows will be dynamically inserted here -->
-                </tbody>
-            </table>
+<body>
+    <div class="container"> <!-- Container to wrap your page content for better control with CSS -->
+        <header>
+            <div id="title-bar">EVDataVisualizer</div>
+            <div class="hero-image"></div> <!-- Your hero image will go here -->
+        </header>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualization.html">Visualization</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="Data.html">Data Description</a></li>
+            </ul>
+        </nav>
+
+        <div class="clearfix"> <!-- Clearfix class to contain floated elements -->
+            <main id="content-area">
+                <center>
+                    <h2>Project Description</h2>
+                </center>
+                <p>A web-based visualization tool for exploring and analyzing Electric Vehicle Population Data. This
+                    project aims to present the data in an interactive and user-friendly manner using HTML, CSS,
+                    JavaScript, and Chart.js.</p>
+            </main>
+
+            <aside id="sidebar">
+                <!-- Sidebar for additional information or links -->
+            </aside>
         </div>
 
-    <footer>
-        <!-- Footer content -->
-    </footer>
+        <footer>
+            <div id="copyright">© 2023 Your Name or Your Company</div>
+        </footer>
+    </div>
 
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Local JS file for your custom scripts -->
-    <script src="./js/main.js"></script>
 </body>
+
 </html>
